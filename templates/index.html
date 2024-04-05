@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sports Facility Management</title>
+</head>
+<body>
+    <h1>Sports Facility Management</h1>
+    <form action="/book" method="post">
+        <label for="facility">Facility:</label>
+        <select name="facility" id="facility">
+            <option value="Gym">Gym</option>
+            <option value="Squash Court">Squash Court</option>
+            <option value="Badminton Court">Badminton Court</option>
+        </select>
+        <br>
+        <br>
+        <label for="slot">Slot:</label>
+        <input type="text" name="slot"  id="slot"><br><br>
+        <label for="roll_number">Roll Number:</label>
+        <input type="text" name="roll_number" id="roll_number"><br><br>
+        <input type="submit" value="Book">
+    </form>
+
+    <h2>Check Availability</h2>
+    <form action="/availability" method="get">
+        <label for="facility_check">Facility:</label>
+        <select name="facility" id="facility_check">
+            <option value="Gym">Gym</option>
+            <option value="Squash Court">Squash Court</option>
+            <option value="Badminton Court">Badminton Court</option>
+        </select><br>
+        <input type="submit" value="Check Availability">
+    </form>
+
+    <h2>Display Availability</h2>
+    <form action="/display_availability" method="get">
+        <label for="facility_display">Facility:</label>
+        <select name="facility" id="facility_display">
+            <option value="Gym">Gym</option>
+            <option value="Squash Court">Squash Court</option>
+            <option value="Badminton Court">Badminton Court</option>
+        </select><br>
+        <input type="submit" value="Display Availability">
+    </form>
+</body>
+</html>
