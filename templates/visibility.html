@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slot Visibility</title>
+</head>
+<body>
+    {% for slot, availability in sportsFacility.slots.items() %}
+        <h5>Slot {{ slot }}: {% if availability %}Available{% else %}Not Available{% endif %}</h5>
+    {% endfor %}
+</body>
+</html>

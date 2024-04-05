@@ -78,12 +78,22 @@ def book():
 @app.route('/availability', methods=['GET'])
 def availability():
     facility_name = request.args.get('facility')
-    return manager.check_availability(facility_name)
+    list=manager.check_availability(facility_name)
+   
+    
+    return render_template('availability.html',manager=list)
 
 @app.route('/display_availability', methods=['GET'])
 def display_availability():
     facility_name = request.args.get('facility')
-    return manager.display_availability(facility_name)
+    list=manager.display_availability(facility_name)
+    if facility_name=='Gym':
+        sport=gym
+    elif  facility_name=='Squash Court':
+        sport=squash_court
+    else:
+        sport=badminton_court
+    return render_template('visibility.html',manager=list,sportsFacility=sport)
 
 if __name__ == "__main__":
     app.run(debug=True)
